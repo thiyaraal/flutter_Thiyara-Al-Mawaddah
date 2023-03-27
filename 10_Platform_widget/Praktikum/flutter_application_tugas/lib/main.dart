@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_tugas/provider/list_contact_prov.dart';
-import 'package:flutter_application_tugas/task2_untuk%20minggu%20depan/soalPrioritas1.dart';
-import 'package:flutter_application_tugas/task_1/CupertinoPage.dart';
-import 'package:flutter_application_tugas/task_1/Eksplorasi.dart';
-import 'package:flutter_application_tugas/task_1/bottom_navbar.dart';
-import 'package:flutter_application_tugas/task_1/drawer.dart';
-import 'package:flutter_application_tugas/task_1/list_view.dart';
+import 'package:flutter_application_tugas/soal_asset_dialog_bottomsheet_navigation/P1_gridGalery.dart';
+import 'package:flutter_application_tugas/soal_from_advance_from_input/soalPrioritas1.dart';
+import 'package:flutter_application_tugas/models/models.dart';
+// import 'package:flutter_application_tugas/soal_asset_dialog_bottomsheet_navigation/bottomSheet.dart';
+// import 'package:flutter_application_tugas/soal_from_advance_from_input/soalPrioritas1.dart';
+// import 'package:flutter_application_tugas/soal_platform_widget/CupertinoPage.dart';
+// import 'package:flutter_application_tugas/soal_platform_widget/Eksplorasi.dart';
+// import 'package:flutter_application_tugas/soal_platform_widget/bottom_navbar.dart';
+// import 'package:flutter_application_tugas/soal_platform_widget/drawer.dart';
+// import 'package:flutter_application_tugas/soal_platform_widget/list_view.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -26,7 +30,8 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home:BotttomNavbarPage()
+
+        home:HomePage()
       ),
     );
   }

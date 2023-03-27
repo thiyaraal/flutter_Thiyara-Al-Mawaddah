@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
-
-import '../model/modelList.dart';
+import 'package:flutter_application_tugas/models/models.dart';
 
 class ContactProvider with ChangeNotifier {
-  List<ListModel> _contacts = [];
-  TextEditingController _namaController = TextEditingController();
-  TextEditingController _phoneController = TextEditingController();
+  final List<ListModel> _contacts = [];
+  final TextEditingController _namaController = TextEditingController();
+  final TextEditingController _phoneController = TextEditingController();
+  // TextEditingController _editNameController = TextEditingController();
+  // TextEditingController _editNumberController = TextEditingController();
+  // List<Map<String, String>> _myData = [];
   List<ListModel> get contacts => _contacts;
 
   TextEditingController get namaController => _namaController;
   TextEditingController get phoneController => _phoneController;
+  TextEditingController get editNameController => _namaController;
+  TextEditingController get editNumberController => _phoneController;
 
   void addContact(ListModel ListModel) {
     _contacts.add(ListModel);
@@ -22,4 +26,10 @@ class ContactProvider with ChangeNotifier {
     _contacts.removeLast();
     notifyListeners();
   }
+
+  // void _editdata(int index) {
+  //   _myData[index]['name'] = editNameController.text;
+  //   _myData[index]['number'] = editNumberController.text;
+  //   final editFormKey = GlobalKey<FormState>();
+  // }
 }
