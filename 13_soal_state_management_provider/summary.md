@@ -16,17 +16,19 @@ atau dengan mebnambah kan path provider pada file pubspec.yml
 3) a. ChangeNotifierProvider 
 - Dalam penggunaan ChangeNotifierProvider kalian dapat langsung membuat object pada ChangeNotifierProvider atau langsung di inisialisasi pada halaman namun harap di ingat hal tersebut tidak dapat dicombine dengan membuat object notifier secara bersamaan baik pada ChangeNotifierProvider dan sebuah halaman karena itu dapat membuat multiple instance object atau objek ChangeNotifier ganda.
     contoh:
-    ChangeNotifierProvider< UnauthenticatedNotifier >(
-      create: (_) => UnauthenticatedNotifier(),
-      child: SomeWidget()
-)
+
+        ChangeNotifierProvider< UnauthenticatedNotifier >(
+          create: (_) => UnauthenticatedNotifier(),
+          child: SomeWidget()
+        )
  b. MultiProvider
 - Jika dalam suatu kasus kalian perlu menggunakan ChangeNotifier lebih dari satu, saya sarankan untuk menggunakan MultiProvider hal ini akan mempermudah kalian dalam membungkus widget yang mengkonsumsi state management dengan jumlah lebih dari satu.
     Contoh : 
-    MultiProvider(
-      providers: [
+
+        MultiProvider(
+        providers: [
         ChangeNotifierProvider(create: (_) => _notifier)
-      ],
-      child: SomeWidget()
-      )
+        ],
+        child: SomeWidget()
+        )
 
