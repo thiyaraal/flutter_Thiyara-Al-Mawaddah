@@ -32,26 +32,26 @@ class MyApp extends StatelessWidget {
 
       /// animation route 
       
-      home:GALERYSCREEN(),
-      onGenerateRoute: (settings) {
-        switch (settings.name) {
-          case '/newpage':
-            return PageAnimationTransition(
-              page: DetailImage(),
-              pageAnimationType: RightToLeftFadedTransition(),
-            );
-          default:
-            return null;
-        }
-      },
+      // home:GALERYSCREEN(),
+      // onGenerateRoute: (settings) {
+      //   switch (settings.name) {
+      //     case '/newpage':
+      //       return PageAnimationTransition(
+      //         page: DetailImage(),
+      //         pageAnimationType: RightToLeftFadedTransition(),
+      //       );
+      //     default:
+      //       return null;
+      //   }
+      // },
 
       ////// tanpa transisi
     
-      // initialRoute: "/",
-      // routes: {
-      //   '/': (_) => GALERYSCREEN(),
-      //   '/newpage': (context) => DetailImage()
-      // },
+      initialRoute: "/",
+      routes: {
+        '/': (_) => GALERYSCREEN(),
+        '/newpage': (context) => DetailImage()
+      },
     );
   }
 }
